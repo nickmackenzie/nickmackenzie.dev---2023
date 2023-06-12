@@ -1,24 +1,24 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
-//import Sidebar from '../components/sidebar';
+import Sidebar from '../components/Sidebar';
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: {
-        default: "Nick MacKenzie",
+        default: "Nick MacKenzie | Full Stack Developer",
         template: "%s | Nick MacKenzie",
     },
     description:
-        "Full Stack Developer | JavaScript | React | Express | Git/Github. 10 years of professional experience in both team and independent settings",
+        "Full Stack Developer | JavaScript | React | Express | MongoDB | SQL | Git/Github. 10 years of professional experience in both team and independent settings",
     openGraph: {
-        title: "Nick MacKenzie",
+        title: "Nick MacKenzie | Full Stack Developer",
         description:
-            "Full Stack Developer | JavaScript | React | Express | Git/Github. 10 years of professional experience in both team and independent settings",
+            "Full Stack Developer | JavaScript | React | Express | MongoDB | SQL | Git/Github. 10 years of professional experience in both team and independent settings",
         url: "https://nickmackenzie.dev",
-        siteName: "Nick MacKenzie",
+        siteName: "Nick MacJenzie | Full Stack Developer",
         images: [
             {
                 url: "https://leerob.io/og.jpg",
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" className={inter.className}>
             <body>
-                {/* <Sidebar /> */}
+                <Sidebar />
                 <main>
                     {children}
                     <Analytics />

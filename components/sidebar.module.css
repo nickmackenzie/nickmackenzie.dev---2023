@@ -1,0 +1,13 @@
+.nav {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    padding:1rem;
+}
+
+.nav a {
+    margin:1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+}
