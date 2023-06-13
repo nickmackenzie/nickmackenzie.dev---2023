@@ -1,6 +1,7 @@
-import React from "react";
-
-const Projects: React.FC = () => {
+import Image from 'next/image'
+import Link from 'next/link'
+import styles from './page.module.css';
+export const Projects = () => {
   const projects = [
     {
       image: "/images/namematch.webp",
@@ -8,7 +9,8 @@ const Projects: React.FC = () => {
       liveURL: "http://name-match.herokuapp.com/",
       sourceCodeURL: "https://github.com/nickmackenzie/namematch",
       stack: "ReactJS | NodeJS | Mongo-DB",
-      name: "NameMatch"
+      name: "NameMatch",
+      url:'namematch'
     },
     {
       image: "/images/souschef.png",
@@ -16,15 +18,17 @@ const Projects: React.FC = () => {
       liveURL: "https://souschef3.herokuapp.com/",
       sourceCodeURL: "https://github.com/nickmackenzie/souschef",
       stack: "ReactJS | Mongo-DB | NodeJs | JWT-Authentication",
-      name: "SousChef"
+      name: "SousChef",
+      url:'souschef'
     },
     {
-      image: "images/hangman.webp",
+      image: "/images/hangman.webp",
       description: "A hangman game made with pure JavaScript, HTML and CSS.",
       liveURL: "https://nickmackenzie.github.io/hangman/",
       sourceCodeURL: "https://github.com/nickmackenzie/hangman",
       stack: "HTML | CSS | JavaScript",
-      name: "Don't Fall Off The Water Fall!"
+      name: "Don't Fall Off The Water Fall!",
+      url:'dontfall'
     },
     {
       image: "/images/trivia.webp",
@@ -32,37 +36,50 @@ const Projects: React.FC = () => {
       liveURL: "http://trivia-night-django-app.herokuapp.com/",
       sourceCodeURL: "https://github.com/nickmackenzie/Trivia-Night",
       stack: "Django | Python | MySQL | JavaScript",
-      name: "Trivia Night"
+      name: "Trivia Night",
+      url:'trivianight'
     },
     {
-      image: "images/codesave.png",
+      image: "/images/codesave.png",
       description: "A NodeJs App using Google Authentication. It allows users to save their code 'snippets' to a cloud database. Supports over 15+ languages with automatic syntax highlighting.",
       liveURL: "https://code-save.herokuapp.com/",
       sourceCodeURL: "https://github.com/nickmackenzie/code-save/",
       stack: "NodeJS | ExpressJS | MongoDB | Google Authentication API | EJS Templates",
-      name: "CodeSave"
+      name: "CodeSave",
+      url:'codesave'
     }
   ];
-
   return (
-    <div>
-      {projects.map((project, index) => (
-        <div key={index}>
-          <img src={project.image} alt={project.name} />
-          <h3>{project.name}</h3>
-          <p>{project.description}</p>
-          <p>Tech Stack: {project.stack}</p>
-          <p>
-            Live URL: <a href={project.liveURL}>{project.liveURL}</a>
-          </p>
-          <p>
-            Source Code:{" "}
-            <a href={project.sourceCodeURL}>{project.sourceCodeURL}</a>
-          </p>
-        </div>
-      ))}
+ <>
+    {projects.map((project, index) => (
+     <>
+  <section>
+    <h1>{project.name}</h1>
+    <div className="content">
+      <p>
+      {project.description}
+      </p>      
+      <p>{project.stack}</p>
+      <a href={project.sourceCodeURL}>View Code</a>
+      <Link href={`/projects/${project.url}`}>Learn More</Link>
     </div>
+    <div className="img">
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+</>
+
+      ))}
+      </>
   );
+
 };
 
 export default Projects;
