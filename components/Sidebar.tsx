@@ -1,14 +1,37 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
 import styles from "./sidebar.module.css";
 
-const sidebarItems = ["home", "about", "projects"];
+const navItems = {
+  '/': {
+    name: 'home',
+  },
+  '/about': {
+    name: 'about',
+  },
+  '/projects': {
+    name: 'projects',
+  },
+  '/blog': {
+    name: 'blog',
+  },
+};
+
 
 export default function Sidebar() {
+  let pathname = usePathname() || '/';
+  if (pathname.includes('/blog/')) {
+    pathname = '/blog';
+  }
+
   return (
     <nav className={styles.nav}>
-      {sidebarItems.map((link) => (
-        <Link href={link != "home" ? link : "/" } key={link}>{link}</Link>
-      ))}
+                {Object.entries(navItems).map(([path, { name }]) => {
+                        const isActive = path === pathname;
+      return  <Link className={isActive ? styles.active : styles.link} href={path != "home" ? path : "/" } key={path}>{name}</Link>
+})}
     </nav>
   );
 }

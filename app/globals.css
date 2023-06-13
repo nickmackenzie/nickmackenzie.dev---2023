@@ -1,6 +1,150 @@
+:root {
+  /* Font Families */
+  --font-family-headlines: 'Albert Sans', sans-serif;
+  --font-family-text: 'Barlow', sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-root: 18px;
+  --font-size-small: calc(var(--font-size-root) * 0.975);
+  --font-size-medium: var(--font-size-root);
+  --font-size-large: calc(var(--font-size-root) * 1.35);
+  --font-size-extra-large: calc(var(--font-size-root) * 2.2);
+
+  /* Colors */
+  /* Gray Scale */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  /* Accent Colors */
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffedd5;
+  --color-accent-200: #fed7aa;
+  --color-accent-300: #fdba74;
+  --color-accent-400: #fb923c;
+  --color-accent-500: #f97316;
+  --color-accent-600: #ea580c;
+  --color-accent-700: #c2410c;
+  --color-accent-800: #9a3412;
+  --color-accent-900: #7c2d12;
+  --color-accent-950: #431407;
+}
+
+/* Text Styles */
+html {
+  font-size: var(--font-size-root);
+}
+
 body {
-  display:flex;
+  font-family: var(--font-family-text);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-gray-700);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headlines);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: var(--font-size-extra-large);
+}
+
+h2 {
+  font-size: var(--font-size-large);
+}
+
+h3,
+h4 {
+  font-size: var(--font-size-medium);
+}
+
+h5,
+h6 {
+  font-size: var(--font-size-small);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-accent-500);
+  text-decoration: none;
+}
+
+/* Reset for ul, ol */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Additional layout styles */
+
+html {
+  font-size: var(--font-size-root);
+}
+
+body {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 10rem;
 }
+
+/* List styles */
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul,
+ol {
+  margin-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(170px, 25%) 1fr;
+}
+

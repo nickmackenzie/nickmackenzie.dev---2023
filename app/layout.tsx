@@ -1,10 +1,11 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Albert_Sans, Barlow } from "next/font/google";
 import type { Metadata } from "next";
-import Sidebar from '../components/Sidebar';
+import Sidebar from "../components/Sidebar";
 import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({ subsets: ["latin"] });
+const albertSans = Albert_Sans({  weight: ["400", "100","600"],subsets: ["latin"] });
+const barlow = Barlow({ weight: ["400", "100","600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: {
@@ -18,10 +19,10 @@ export const metadata: Metadata = {
         description:
             "Full Stack Developer | JavaScript | React | Express | MongoDB | SQL | Git/Github. 10 years of professional experience in both team and independent settings",
         url: "https://nickmackenzie.dev",
-        siteName: "Nick MacJenzie | Full Stack Developer",
+        siteName: "Nick MacKenzie | Full Stack Developer",
         images: [
             {
-                url: "https://leerob.io/og.jpg",
+                url: "https://nickmackenzie.dev/content/avatar.jpeg",
                 width: 1920,
                 height: 1080,
             },
@@ -43,6 +44,7 @@ export const metadata: Metadata = {
     icons: {
         shortcut: "/favicon.ico",
     },
+
     // verification: {
     //   google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
     //   yandex: '14d2e73487fa6c71',
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={inter.className}>
+        <html lang="en" className={`${barlow.className} ${albertSans.className}`}>
             <body>
                 <Sidebar />
                 <main>
