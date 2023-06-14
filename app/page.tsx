@@ -2,7 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { name, about, bio, avatar,role } from '../content/info';
 
-export default function Home() {
+
+export default async function Home() {
+    
     return (
         <section className={styles.section}>
             <h1>{name}</h1>

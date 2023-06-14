@@ -1,20 +1,9 @@
-// import { MDXRemote } from 'next-mdx-remote/rsc'
-// import Link from 'next/link'
-// export default async function DontFall() {
-//   const res = await fetch("https://raw.githubusercontent.com/nickmackenzie/hangman/master/README.md")
-//   const markdown = await res.text()
-//   return (
-//   <>
-//   <MDXRemote source={markdown} />
-//   <Link href='/projects'>Back</Link>
-//   </>
-//   )
-// }
-
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-export default async function Projects() {
+import {TbArrowBigRightFilled,TbArrowBigLeftFilled} from 'react-icons/tb'
+
+export default async function DontFall() {
     const projects = [
         // {
         //     image: "/images/namematch.webp",
@@ -72,7 +61,7 @@ export default async function Projects() {
         // },
     ];
     return (
-   
+   <>
       <div className={styles.wrapper}>
       {projects.map((project, index) => (
         <div className={styles.card}>
@@ -105,13 +94,13 @@ export default async function Projects() {
           </div>
         </div>
       ))}
-      <Link href='/projects/trivianight'>Next</Link>
+      
     </div>
-
+    <div className={styles.nav}>
+ <Link className={styles.link} href='/projects/souschef'><TbArrowBigLeftFilled/>   Back</Link>
+ <Link className={styles.link} href='/projects'>Next <TbArrowBigRightFilled/>
+</Link>
+</div>
+ </>
     );
 }
-
-
-
-
-

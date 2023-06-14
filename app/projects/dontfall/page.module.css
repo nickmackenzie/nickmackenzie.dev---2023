@@ -165,3 +165,18 @@
 }
 
 
+
+
+.link {
+  font-size: var(--font-size-medium);
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
