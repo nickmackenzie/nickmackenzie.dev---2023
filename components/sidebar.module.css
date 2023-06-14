@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     height: 50vh;
-    align-items: end;
+    align-items: flex-end;
     margin-right: 1rem;
 }
 
