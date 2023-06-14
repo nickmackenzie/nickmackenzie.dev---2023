@@ -64,7 +64,7 @@ export default async function SousChef() {
    <>
       <div className={styles.wrapper}>
       {projects.map((project, index) => (
-        <div className={styles.card}>
+        <div key={project.name} className={styles.card}>
           <div className={styles.left}>
             <Image src={project.image} width='430' height='300' alt={project.name} />
             <i className="fa fa-long-arrow-left" />

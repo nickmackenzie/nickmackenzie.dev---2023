@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import {TbArrowBigRightFilled} from 'react-icons/tb'
+import { TbArrowBigRightFilled } from "react-icons/tb";
 
 export default async function Projects() {
     const projects = [
@@ -61,43 +61,45 @@ export default async function Projects() {
         // },
     ];
     return (
-   <>
-      <div className={styles.wrapper}>
-      {projects.map((project, index) => (
-        <div key={project.url} className={styles.card}>
-          <div className={styles.left}>
-            <Image src={project.image} width='430' height='300' alt={project.name} />
-          </div>
-          <div className={styles.right}>
-            <div className={styles.productInfo}>
-              <div className={styles.productName}>
-                <h1>{project.name}</h1>
-                <h3>{project.subtitle}</h3>
-                <i className="fa fa-search" />
-                <i className="fa fa-user" />
-                <i className="fa fa-shopping-cart" />
-              </div>
-              <div className={styles.details}>
-                <p>{project.description}</p>
-              </div>
-              <span className={styles.foot}>
-                <i className="fa fa-shopping-bag" />
-                View Code
-              </span>
-              <span className={styles.foot}>
-                <i className="fa fa-shopping-cart" />
-                More Info
-              </span>
+        <>
+            <div className={styles.wrapper}>
+                {projects.map((project, index) => (
+                    <div key={project.name} className={styles.card}>
+                        <div className={styles.left}>
+                            <Image
+                                src={project.image}
+                                width="430"
+                                height="300"
+                                alt={project.name}
+                            />
+                        </div>
+                        <div className={styles.right}>
+                            <div className={styles.productInfo}>
+                                <div className={styles.productName}>
+                                    <h1>{project.name}</h1>
+                                    <h3>{project.subtitle}</h3>
+                                </div>
+                                <div className={styles.details}>
+                                    <p>{project.description}</p>
+                                </div>
+                                <span className={styles.foot}>
+                                    <i className="fa fa-shopping-bag" />
+                                    View Code
+                                </span>
+                                <span className={styles.foot}>
+                                    <i className="fa fa-shopping-cart" />
+                                    More Info
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-          </div>
-        </div>
-      ))}
-    </div>
-    <div className={styles.nav}>
- 
- <Link className={styles.link} href='/projects/souschef'>Next <TbArrowBigRightFilled/>
-</Link>
-</div>
- </>
+            <div className={styles.nav}>
+                <Link className={styles.link} href="/projects/souschef">
+                    Next <TbArrowBigRightFilled />
+                </Link>
+            </div>
+        </>
     );
 }
