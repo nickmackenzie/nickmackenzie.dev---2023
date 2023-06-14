@@ -35,7 +35,7 @@ export default async function Home() {
                     </a>
                 </li>
                 <li>
-                    <a rel="noopener noreferrer" target="_blank" href="https://leerob.substack.com">
+                    <a rel="noopener noreferrer" target="_blank" href="">
                         {/* <ArrowIcon /> */}
                         <p>Contact Me</p>
                     </a>
