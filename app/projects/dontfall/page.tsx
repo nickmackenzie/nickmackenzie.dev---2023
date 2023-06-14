@@ -1,6 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from 'next/link'
-export const Page = async () => {
+export default async function DontFall() {
   const res = await fetch("https://raw.githubusercontent.com/nickmackenzie/hangman/master/README.md")
   const markdown = await res.text()
   return (
@@ -11,6 +11,6 @@ export const Page = async () => {
   )
 }
 
-export default Page;
+
 
 

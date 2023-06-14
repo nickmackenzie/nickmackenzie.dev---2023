@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import styles from './page.module.css';
-export const Projects = () => {
+export default async function Projects() {
   const projects = [
     {
       image: "/images/namematch.webp",
@@ -82,4 +80,4 @@ export const Projects = () => {
 
 };
 
-export default Projects;
+
