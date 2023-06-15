@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { name, about, bio, avatar,role } from '../content/info';
+import { name, about, bio, avatar,role } from './info/info';
 
 
 export default async function Home() {

@@ -18,7 +18,7 @@ export const aboutExtended = () => {
         <>
           
   <p>I'm passionate about finding exciting opportunities to showcase my skills and expertise.</p>
-  <p>Currently, I work as a Full Stack Developer at C3-Solutions, specializing in custom application development using <span className="highlight">.NET, C#, JavaScript, MSSQL, NodeJS, and Bootstrap</span>. My focus is on creating intuitive user experiences, scalable code, and robust RESTful APIs.</p>
+  <p>Currently, I work as a Full Stack Developer at C3-Solutions, specializing in custom application development using <span className="highlight">.NET, C#, JavaScript, MSSQL, NodeJS, and the ZOHO Suite (CRM, Deluge, Flow) </span>. My focus is on creating intuitive user experiences, scalable code, and robust RESTful APIs.</p>
   <p>With a background in hospitality management, I bring a strong work ethic, exceptional organizational skills, and problem-solving abilities to my development projects. I excel in fast-paced environments and have a keen eye for detail.</p>
   <p>I graduated from the General Assembly Software Engineering program, equipping me with essential skills for building modern full-stack web applications. I'm proficient in version control with <span className="highlight">Git and GitHub</span>, enabling effective collaboration within teams. I'm always eager to learn and adapt to stay at the forefront of the ever-evolving software engineering field.</p>
         </>

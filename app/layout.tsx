@@ -1,7 +1,7 @@
-import "./globals.css";
+import "./styles/globals.css";
 import { Inter, Albert_Sans, Barlow } from "next/font/google";
 import type { Metadata } from "next";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "./components/Sidebar";
 import { Analytics } from "@vercel/analytics/react";
 
 const albertSans = Albert_Sans({  weight: ["400", "100","600"],subsets: ["latin"] });
