@@ -30,18 +30,19 @@
   --color-gray-900: #111827;
   --color-gray-950: #030712;
 
-  /* Accent Colors */
-  --color-accent-50: #fff7ed;
-  --color-accent-100: #ffedd5;
-  --color-accent-200: #fed7aa;
-  --color-accent-300: #fdba74;
-  --color-accent-400: #fb923c;
-  --color-accent-500: #f97316;
-  --color-accent-600: #ea580c;
-  --color-accent-700: #c2410c;
-  --color-accent-800: #9a3412;
-  --color-accent-900: #7c2d12;
-  --color-accent-950: #431407;
+ /* Accent Colors */
+--color-accent-50: #f8fafc;
+--color-accent-100: #f1f5f9;
+--color-accent-200: #e2e8f0;
+--color-accent-300: #cbd5e1;
+--color-accent-400: #94a3b8;
+--color-accent-500: #64748b;
+--color-accent-600: #475569;
+--color-accent-700: #334155;
+--color-accent-800: #1e293b;
+--color-accent-900: #0f172a;
+--color-accent-950: #020617;
+
 }
 
 /* Text Styles */
@@ -150,3 +151,24 @@ body {
 }
 
 
+
+
+
+/* 
+Mobile Styles
+*/
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem !important;
+    height: 65vh !important;
+    padding: 1rem !important;
+  }
+  nav {
+    flex-direction: row !important;
+    margin: 1rem !important;
+  }
+}
